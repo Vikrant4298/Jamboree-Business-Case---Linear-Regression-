@@ -1,0 +1,62 @@
+# Business Insights & Recommendations
+# Insights:
+• First column was observed as unique row identifier which was dropped and was not required for model building
+
+• University Rating , SOP and LOR strength and research are seems to be discrete random Variables , but also ordinal numeric data.
+
+• All the other features are numeric, ordinal and continuous.
+
+• No null values were present in data.
+
+• No Significant amount of outliers were found in data.sChance of admission(target variable) and GRE score(an independent feature) are nearly normally distribted.
+
+• Independent Variables (Input data): GRE Score, TOEFL Score, University Rating, SOP, LOR, CGPA, Research
+
+• Target/Dependent Variable : Chance of Admit (the value we want to predict)
+
+• From correlation heatmap , we can observe GRE score, TOEFL score and CGPA have very high correlation with Change of admission.
+
+• University rating, SOP ,LOR and Research have comparatively slightly less correlated than other features.
+
+• Chances of admit is a probability measure , which is within 0 to 1 which is good (no outliers or missleading data in column).
+
+• Range of GRE score looks like between 290 to 340.
+
+• Range of TOEFL score is between 92 to 120
+
+• University rating , SOP and LOR are distributed between range of 1 to 5.
+
+• CGPA range is between 6.8 to 9.92.
+
+• From boxplots (distribution of chance of admition (probability of getting admition) as per GRE score ) : with higher GRE score , there is high probability of getting an admission.
+
+• Students having high toefl score , has higher probability of getting admission.
+
+• From count plots, we can observe , statement of purpose SOP strength is positively correlated with Chance of Admission.
+
+• We can also similar pattern in Letter of Recommendation Stength and University rating , have positive correlation with Chaces of Admission.
+
+• Student having research has higher chances of Admission , but also we can observe some outliers within that category.
+
+# Model Predictors:
+Our analysis identified several key predictors strongly correlated with admission chances.
+
+Notably, GRE score, TOEFL score, and CGPA emerged as significant factors influencing admission probabilities.
+
+Multicollinearity Check:
+Assessing multicollinearity revealed no significant issues, indicating the robustness of our model despite high correlations among predictors.
+
+Model Performance: Both Linear Regression and Ridge Regression models exhibited promising performance, capturing up to approximentally 82% of the variance in admission probabilities.
+
+Data Distribution: Exploratory data analysis uncovered left-skewed distributions in admission probabilities and strong positive correlations between exam scores and admission chances.
+
+# Recommendations:
+Feature Enhancement:
+Encourage students to focus on improving GRE scores, CGPA, and the quality of Letters of Recommendation (LOR), as these factors significantly influence admission chances.
+
+# Data Augmentation:
+Collect a wider range of data beyond academic metrics to capture applicants’ holistic profiles, including extracurricular achievements, personal statements, and diversity factors.
+
+# Additional Features:
+Given the strong correlation among CGPA, we can enrich the predictive model with additional diverse features such as Research, work experience, internships, or extracurricular activities.
+
